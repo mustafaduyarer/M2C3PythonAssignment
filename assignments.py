@@ -73,12 +73,3 @@ print("\"hello world\"")
 
 print('-------------------------------------------------------')
 
-# Exercise 9: Print “hello world”.
-print("\"hello world\"")
-
-print('-------------------------------------------------------')
-
-# Exercise 9: Print “hello world”.
-print("\"hello world\"")
-
-print('-------------------------------------------------------')
