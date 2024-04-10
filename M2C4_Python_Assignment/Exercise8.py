@@ -12,8 +12,5 @@ sorted_list = sorted(my_list)
 print(sorted_list)
  # bu calismadi ama sorunu bulamadim
 
-my_list.sort()
-sorted_list = sorted(my_list)
-print(sorted_list)
- # bu calismadi ama sorunu bulamadim
+
 
