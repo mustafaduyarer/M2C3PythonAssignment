@@ -19,8 +19,6 @@ Buzz
 def fizz_buzz(num1, num2):
     for num in range(num1, num2):
         output = ""
-        if num % 3 == 0 and num % 5 == 0:
-            output += 'FizzBuzz'
         if num % 3 == 0:
             output = output + "Fizz"
         if num % 5 == 0:
