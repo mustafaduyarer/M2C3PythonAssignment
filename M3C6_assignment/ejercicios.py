@@ -27,3 +27,6 @@ usuario_2 = user2.conditional()
 
 print(usuario_1)
 print(usuario_2)
+
+print(usuario_1)
+print(usuario_2)
