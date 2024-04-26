@@ -30,3 +30,6 @@ print(usuario_2)
 
 print(usuario_1)
 print(usuario_2)
+
+print(usuario_1)
+print(usuario_2)
