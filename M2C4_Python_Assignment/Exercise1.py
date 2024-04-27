@@ -45,3 +45,8 @@ print('--------------------------------')
 
 my_dict = {"name": "Alice", "age": 30, "city": "Wonderland"}
 print(my_dict)
+
+#Dictionary: A dictionary stores key-value pairs. Keys must be unique. Here’s an example:
+
+my_dict = {"name": "Alice", "age": 30, "city": "Wonderland"}
+print(my_dict)
