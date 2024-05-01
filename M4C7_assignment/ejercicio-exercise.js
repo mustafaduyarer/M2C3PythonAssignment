@@ -22,3 +22,4 @@ function checkNumber(a, b, c, d) {
 // Example usage:
 checkNumber(10, 20, 3, 4); // Output: "The number is greater than 50!"
 checkNumber(5, 10, 2, 3); // Output: "The number is less than 50!"
+checkNumber(5, 10, 2, 3); // Output: "The number is less than 50!"
