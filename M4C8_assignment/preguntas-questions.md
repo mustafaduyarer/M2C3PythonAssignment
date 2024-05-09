@@ -442,7 +442,7 @@ En este caso, a obtiene el valor 1 , y d obtiene el valor 2 .
 
 #### -------------------------------------------------------------------------------------------------------
 
-## ¿Qué hace el operador de extensión en JS?
+## 5- ¿Qué hace el operador de extensión en JS?
 > What does the extension operator do in JS?
 
 > El operador de extensión en JavaScript se llama en realidad la extends palabra clave. Se utiliza en declaraciones de clase o expresiones de clase para crear una clase que es un elemento secundario de otra clase 1 . Así es como funciona:
@@ -552,8 +552,8 @@ new SomeClass(); // Output: "Base class" followed by "Derived class"
 #### -------------------------------------------------------------------------------------------------------
 
 
-## 5-¿Qué es la programación orientada a objetos?
-> 5- What is object -oriented programming?
+## 6-¿Qué es la programación orientada a objetos?
+> 6- What is object -oriented programming?
 
 > La programación orientada a objetos (POO) es un paradigma de programación fundamental utilizado por casi todos los desarrolladores en algún momento de su carrera. Es el paradigma de programación más popular para el desarrollo de software y se enseña como la forma estándar de codificar durante la mayor parte de la carrera  educativa de un programador. Analicemos los conceptos básicos de la POO:
 
@@ -657,21 +657,81 @@ What are the main principles of OOP?
 > In summary, OOP principles provide a structured way to model real-world entities, promote code reusability, and enhance software maintainability. By understanding and applying these principles, developers can create robust, flexible, and efficient software systems. 
 
 
-## 6-¿Qué es la programación orientada a objetos?
-> 6- What is object -oriented programming?
+## 7-¿Qué es una promesa en JS?
+> 7- What is a promise in JS?
 
+* En JavaScript, una promesa es un objeto especial que representa la finalización final (o el error) de una operación asincrónica y su valor resultante. Déjame desglosártelo:
+---
+* In JavaScript, a promise is a special object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. Let me break it down for you:
 
+**Operación asincrónica:**  **Asynchronous Operation:**
+- cuando se realiza una acción que tarda algún tiempo en completarse (como la obtención de datos de un servidor, la lectura de un archivo o la espera de una entrada del usuario), se considera asincrónica. En lugar de bloquear la ejecución de su código, JavaScript le permite continuar con otras tareas mientras espera el resultado de esa operación.
 
+- When you perform an action that takes some time to complete (like fetching data from a server, reading a file, or waiting for a user input), it’s considered asynchronous. Instead of blocking the execution of your code, JavaScript allows you to continue with other tasks while waiting for the result of that operation.
 
+**Creación de promesas:**  **Promise Creation:**
+- Una promesa actúa como marcador de posición para el valor que estará disponible una vez que finalice la operación asincrónica. Se crea una promesa mediante el Promise constructor. He aquí un ejemplo básico:
+- A promise acts as a placeholder for the value that will be available once the asynchronous operation finishes. You create a promise using the Promise constructor. Here’s a basic example:
 
+####  Example: Ejemplo 
+```javascript
+const myPromise = new Promise((resolve, reject) => {
+  // Asynchronous operation (e.g., fetching data)
+  // If successful, call resolve(value)
+  // If there's an error, call reject(error)
+});
+w SomeClass(); // Output: "Base class" followed by "Derived class"
 
+```
+**Estados de una promesa:**    **States of a Promise:** 
+**Pendiente:** el estado inicial cuando se crea la promesa. Ni se cumple ni se rechaza.
+**Pending:** The initial state when the promise is created. It’s neither fulfilled nor rejected.
 
+**Cumplido:** la operación se ha completado correctamente y la promesa tiene un valor.
+**Fulfilled:** The operation completed successfully, and the promise has a value.
 
+**Rechazada:** se produjo un error en la operación y la promesa tiene un motivo de error.
+**Rejected:** The operation failed, and the promise has an error reason.
 
+### **Manejadores y encadenamientos:**  **Handlers and Chaining:**
+* Puede asociar controladores (devoluciones de llamada) a una promesa mediante el .then() método. Se llama a estos controladores cuando se cumple o se rechaza la promesa.
+   - You can associate handlers (callbacks) with a promise using the .then() method. These handlers are called when the promise is either fulfilled or rejected.
 
+* Las promesas le permiten encadenar operaciones asincrónicas. Cada uno .then() devuelve una nueva promesa, lo que le permite controlar el resultado de la operación anterior.
+   - Promises allow you to chain asynchronous operations together. Each .then() returns a new promise, allowing you to handle the result of the previous operation.
 
+####  Example: Ejemplo 
+```javascript
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      // Simulating fetching data
+      const data = { id: 1, name: 'John' };
+      resolve(data); // Fulfilled with the data
+    }, 1000);
+  });
+}
 
+fetchData()
+  .then((result) => {
+    console.log('Data received:', result);
+    // You can return another promise here
+    return fetchMoreData();
+  })
+  .then((moreData) => {
+    console.log('More data received:', moreData);
+  })
+  .catch((error) => {
+    console.error('Error fetching data:', error);
+  });
 
+```
+> Remember, promises make handling asynchronous code more manageable and avoid callback hell. They allow you to write cleaner, more readable code while ensuring proper error handling. 
+>
+> Recuerde que las promesas hacen que el manejo de código asincrónico sea más manejable y evitan el infierno de las devoluciones de llamada. Le permiten escribir código más limpio y legible al tiempo que garantizan un manejo adecuado de los errores. 
+
+## 8- ¿Qué hacen async y await por nosotros?
+> What do Async and Await for us?
 
 
 
