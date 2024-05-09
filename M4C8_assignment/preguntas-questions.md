@@ -4,608 +4,325 @@
 
 
 
-## ¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?
-> What differentiates Javascript from any other programming language?
+## ¿Qué tipo de bucles hay en JS?
 
-### ¿Qué es JavaScript? What is Javascript?
+## ¿Cuáles son las diferencias entre const, let y var?
 
-JavaScript es un lenguaje de programación, de secuencias de comandos, capaz de aportar soluciones eficaces en la mayoría de los ámbitos de la tecnología. Te permite crear contenido de actualización dinámica, controlar multimedia, animar imágenes, etc.
-> Javascript is a programming language, command sequences, capable of providing effective solutions in most technology areas. It allows you to create dynamic update content, control multimedia, encourage images, etc.
-### ¿Para qué se utiliza JavaScript?
+## ¿Qué es una función de flecha?
 
-Los usos más importantes de JavaScript son los siguientes:
+## ¿Qué es la deconstrucción de variables?
 
-* Desarrollo de sitios web del lado del cliente (front end, en el navegador).
-* Desarrollo de aplicaciones para dispositivos móviles, híbridas o que compilan a nativo.
-* Construcción de servidores web y aplicaciones de servidor.
-* Desarrollo de aplicaciones de escritorio para sistemas Windows, Linux y Mac.
-* Desarrollo de juegos.
+## ¿Qué hace el operador de extensión en JS?
 
-### JavaScript: características y beneficios
+## ¿Qué es la programación orientada a objetos?
 
-* **Simplicidad:** Posee una estructura sencilla que lo vuelve más fácil de aprender e implementar.&#x20;
-* **Velocidad:** Se ejecuta más rápido que otros lenguajes y favorece la detección de los errores.
-* **Versatilidad:** Es compatible con otros lenguajes, como: PHP y Java. Además, hace que la ciencia de datos y el aprendizaje automático sean accesibles.
-* **Popularida:** Existen numerosos recursos y foros disponibles para ayudar a los principiantes con habilidades y conocimientos limitados.
-* **Carga del servidor**: La validación de datos puede realizarse a través del navegador web y las actualizaciones solo se aplican a ciertas secciones de la página web.
-* **Actualizaciones:** Se actualiza de forma continua con nuevos frameworks y librerías, esto le asegura relevancia dentro del sector.
+## ¿Qué es una promesa en JS?
 
-### ¿Cuáles son las desventajas de JavaScript?
+## ¿Qué hacen async y await por nosotros?
+## -------------------------------------------------------------------------------------
 
-* **Compatibilidad con los navegadores:** Los diferentes navegadores web interpretan el código JavaScript de forma distinta. Por lo tanto, necesitarás probarlo en todos los navegadores populares, incluyendo las versiones más antiguas.
-* **Depuración:** Aunque algunos editores de HTML admiten la depuración, son menos eficaces que otros editores. Encontrar el problema puede ser un reto, ya que los navegadores no muestran ninguna advertencia sobre los errores.
+## 1-¿Qué tipo de bucles hay en JS?
+> What kind of loops are in JS?
 
-### Principales diferencias entre JavaScript y Java.
+Un bucle en programación se refiere a una estructura de flujo de control que le permite ejecutar repetidamente un conjunto de instrucciones o un bloque de código siempre que se cumpla una condición especificada. Los bucles son fundamentales para el concepto de iteración en la programación, ya que mejoran la eficiencia del código, la legibilidad y promueven la reutilización de la lógica  del código. Estos son los principales tipos de bucles en programación:
 
-En un artículo anterior, ya te contamos acerca del lenguaje de programación Java. Aquí aprovechamos para descubrirte las diferencias que tiene con JavaScript:
+> A loop in programming refers to a control flow structure that allows you to repeatedly execute a set of instructions or a code block as long as a specified condition is met. Loops are fundamental to the concept of iteration in programming, enhancing code efficiency, readability, and promoting the reuse of code logic. Here are the main types of loops in programming:
 
-* Java se utiliza para crear aplicaciones en variados dispositivos o en navegadores, mientras que JavaScript se usa principalmente para documentos HTML y navegadores.
-* Tanto Java como JavaScript emplean diferentes complementos. Incluso las extensiones de archivo son distintas, siendo Java «.Java» y JavaScript «.js».
-* Java es un lenguaje compilado e interpretado, mientras que los códigos JavaScript son ejecutados directamente por un navegador.
-* Java es un lenguaje de programación multiplataforma orientado a objetos y centrado en la red, mientras que JavaScript es un lenguaje de secuencias de comandos que permite a los desarrolladores crear páginas web interactivas.
-* La sintaxis de Java requiere que se declaren los tipos de datos, mientras que la sintaxis de JavaScript no necesita esto. Además, Java es un lenguaje estático y JavaScript es dinámico.
-* JavaScript se depura en una fase y Java en dos. JavaScript hace que el código trabaje informando de los errores que se producen a medida que se está ejecutando. Java primero realiza la fase de compilación, y el compilador indica los posibles errores de sintaxis presentes en nuestro código. Después, se ejecuta el programa, y pueden surgir errores para ser depurados.
-* Java posee variables definidas que no se pueden cambiar y es más complejo, JavaScript puede ser cambiante, dándole flexibilidad, y es más sencillo.
+En JavaScript, hay varios tipos de bucles que le permiten ejecutar un bloque de código repetidamente. Vamos a explorarlos:
+> In JavaScript, there are several types of loops that allow you to execute a block of code repeatedly. Let’s explore them:
 
-### Diferencias más marcadas entre JavaScript y Python.
+### For Loop: Bucle For:
+* The for loop is commonly used for iterating over a sequence of values (such as an array).
+  El for bucle se usa comúnmente para iterar sobre una secuencia de valores (como una matriz).
+* It has three expressions:
+  Tiene tres expresiones:
+  - **Initialization** (expression 1): Executed once before the loop starts.
+    - Inicialización ( expression 1 ): Se ejecuta una vez antes de que comience el bucle.
+  - **Condition** (expression 2): Determines whether the loop should continue.
+    - Condición ( expression 2 ): Determina si el bucle debe continuar.
+  - **Update** (expression 3): Executed after each iteration.
+    - Actualización ( expression 3 ): Se ejecuta después de cada iteración.
 
-&#x20;¿Cuáles son realmente las diferencias más relevantes entre ambos lenguajes de programación? A continuación presentamos algunas de las que más se resaltan.
-
-* Python se concibió como idea a finales de los 80’s y su primera versión fue lanzada en 1991, JavaScript por otra parte vino un poco después, su primera versión llegó por allá en 1995. Por tanto, Python es un poco más antiguo.
-* En Python, existen diferentes tipos numéricos como int, float, etc. Mientras que en JavaScript solo hay números de punto flotante.
-* En los últimos años, Python ha superado en popularidad a JavaScript.
-* **Sintaxis:** JavaScript utiliza llaves `{}` y puntos y comas `;` para separar declaraciones y bloques de código. Python utiliza indentación (espacios en blanco) para definir bloques de código, lo que lo hace más fácil de leer y mantener.
-* **Ambiente de ejecución:** JavaScript es ejecutado principalmente en navegadores web y también puede ser utilizado en el lado del servidor a través de Node.js. Python se puede utilizar en una amplia variedad de entornos, incluidos servidores web, scripts, aplicaciones de escritorio, análisis de datos y más.
-* **Tipado:** JavaScript es un lenguaje de tipado débil y dinámico, lo que significa que las variables pueden cambiar de tipo durante la ejecución y no requieren una declaración de tipo explícita. Python es un lenguaje de tipado fuerte y dinámico, lo que significa que las variables están asociadas con un tipo específico y se requiere una declaración de tipo explícita.
-* JavaScript es un lenguaje de programación interpretado y orientado a eventos, diseñado para su uso principalmente en navegadores web. Python es un lenguaje de programación interpretado, multipropósito y general, utilizado en diversas aplicaciones, desde desarrollo web hasta ciencia de datos.
-
-
-> In summary, JavaScript’s interpreted nature, client-side execution, object-oriented paradigm, dynamic typing, and widespread adoption differentiate it from other programming languages. Understanding these distinctions helps developers choose the right language for their specific needs. 
->
-> En resumen, la naturaleza interpretada de JavaScript, la ejecución del lado del cliente, el paradigma orientado a objetos, la tipificación dinámica y la adopción generalizada lo diferencian de otros lenguajes de programación. Comprender estas distinciones ayuda a los desarrolladores a elegir el lenguaje adecuado para sus necesidades específicas
-
-
-## ¿Cuáles son algunos tipos de datos JS?
-## What are some JS data types?
-
-Certainly! JavaScript has eight fundamental data types. Let’s explore each of them:
-
-* **String:**
-* A string represents a sequence of characters, such as "Hello, World!". Strings can be enclosed in either single quotes (') or double quotes (").
-
-* **String:** representa datos textuales (cadenas de caracteres).
-
+#### Example: Ejemplo:
 ```javascript
-console.log(typeof 'MZ');
-
-// string
-```
-
-* **Number:**
-* Numbers in JavaScript are stored as decimal numbers (floating point). They can be written with or without decimals. For example:
-With decimals: let x1 = 34.00;
-Without decimals: let x2 = 34;
-
-**Number:** permite representar y manipular valores numéricos como «37» o «-9.25».
-
-```javascript
-console.log(typeof 42);
-
-// number
-```
-
-* **Bigint:**
-* Introduced in ES11 (ECMAScript 2020), BigInt allows you to represent large integers beyond the limits of the Number type. For example: const bigNumber = 1234567890123456789012345678901234567890n;
-* **BigInt:** representa valores numéricos que son demasiado grandes para ser representados por el tipo de dato **number**.
-
-```javascript
-console.log(typeof 1234567890123456789n);
-
-// bigint
-```
-
-* **Boolean:**
-* A boolean represents either true or false. It’s commonly used for conditional statements and logical operations.
-
-**Boolean:** representa un valor lógico y puede tener dos valores, ya sean **true** o **false**.&#x20;
-
-```javascript
-console.log(typeof true);
-
-// boolean
-```
-
-* **Undefined:**
-* When a variable is declared but not assigned a value, it is undefined. For example: let myVar; // undefined
-* * **Undefined:** representa una variable que no ha sido declarada o a la cual no se le ha asignado un valor.
-
-```javascript
-console.log(typeof undefined);
-
-// undefined
-```
-* **Null:**
-* Represents the intentional absence of any value. It’s often used to indicate that a variable has no value or an empty object reference.
-
-* **Null:** representa la ausencia intencional de cualquier valor, un valor nulo o «vacío».
-***
-* **Symbol:**
-* Introduced in ES6, symbols are unique and immutable values. They are often used as property keys in objects to prevent accidental name clashes.
-* **Symbol:** es un valor primitivo único e inmutable.
-
-```javascript
-console.log(typeof Symbol(1));
-
-// symbol
-```
-
-* **Object:**
-* The most versatile data type. Objects can contain key-value pairs, arrays, functions, and other objects. For example:
-
-Existen seis tipos de datos primitivos, es decir, que no son un objeto. Hay que tener cuidado con este concepto porque JavaScript en muchas situaciones convierte automáticamente los datos primitivos en objetos equivalentes a excepción de **null** y **undefined**.
-
-* **Object:** representa una colección de datos definidos y entidades más complejas.
-
-```javascript
-console.log(typeof {});
-
-//object
-```
-
-* **Function:** es una forma abreviada para funciones, aunque cada constructor de funciones se deriva del constructor **Object**. Son objetos con la capacidad de ser ejecutables.
-
-```javascript
-console.log(typeof function() {});
-
-// function
-```
-
-## ¿Cuáles son las tres funciones de String en JS?
-### What are the three String functions in JS?
-
-#### 1. String.split()
-
-Divide una cadena en un arreglo de subcadenas de la cadena original a partir de un carácter separado.
-> Divide a chain into an arrangement of subcadens of the original chain from a separate character.
-```javascript
-let cadena = "Hola,mundo,JavaScript";
-console.log(cadena.split(","));
-
-// (3) ['Hola', 'mundo', 'JavaScript']
-```
-
-#### 2. String.substring()
-
-Extrae caracteres desde un índice A hasta un índice B sin incluirlo
-> Extracts characters from an index A to a B index without including it
-
-```javascript
-let cadena = "Hola";
-console.log(cadena.substring(0,3));
-
-// Hol
-```
-
-#### 3. String.trim()
-
-Elimina espacios en blanco al inicio y al final de una cadena:
-> Eliminate blank spaces at the beginning and at the end of a chain:
-
-```javascript
-let cadena = "   Hola   ";
-console.log(cadena.trim());
-
-// Hola
-```
-
-## ¿Qué es un condicional?
-## What is a conditional?
-> A conditional is a sentence structure that expresses a particular situation and its result or consequence. It consists of two main parts: the if clause (which sets out a condition) and the main clause (which describes what happens when that condition is fulfilled).
->
-> Un condicional es una estructura de oración que expresa una situación particular y su resultado o consecuencia. Consta de dos partes principales: la cláusula if (que establece una condición) y la cláusula principal (que describe lo que sucede cuando se cumple esa condición).
-
-En el mundo de la programación, a menudo necesitamos que nuestro código tome decisiones basadas en ciertas condiciones. Aquí es donde entra en juego el condicional _if_ en JavaScript.
-
-### Condicional if.
-
-El condicional _if_ evalúa una expresión y, si esa expresión es verdadera, ejecuta un bloque de código. La estructura básica del condicional _if_ es simple y directa.
-
-```
-// Sintaxis
-```
-
-```javascript
-/if (condición) {
-    // Código a ejecutar si la condición es verdadera
-}
-```
-
-#### Ejemplos:
-
-#### Verificar si un número es mayor que 10.
-
-```javascript
-let numero = 15;
-if (numero > 10) {
-    console.log("El número es mayor que 10.");
+for (let i = 0; i < 5; i++) {
+    console.log("The number is " + i);
 }
 
-// El número es mayor que 10.
-```
-
-#### Verificar si un número es positivo
-
-```javascript
-let numero = 5;
-if (numero > 0) {
-    console.log("El número es positivo.");
-}
-
-// El número es positivo.
-```
-
-#### Comprobar si una palabra es "hola"
-
-```javascript
-let palabra = "hola";
-if (palabra === "hola") {
-    console.log("La palabra es hola.");
-}
-
-// La palabre es hola.
+//This loop will run from i = 0 to i = 4
+//Este bucle se ejecutará de i = 0 a i = 4
 ```
 
 
+### While Loop: Bucle while:
 
-#### Verificar si un estudiante pasó el examen
-
-```javascript
-let nota = 85;
-if (nota >= 60) {
-    console.log("El estudiante pasó el examen.");
-}
-
-// El estudiante pasó el examen.
-```
-
-#### Verificar si un número es par o impar
-
-<pre class="language-javascript"><code class="lang-javascript"><strong>let numero = 7;
-</strong>if (numero % 2 === 0) {
-    console.log("El número es par.");
-}
-
-if (numero % 2 !== 0){
-    console.log("El número es impar.");
-}
-
-// El número es impar.
-</code></pre>
-
-### Condicional if - else.
-
-Imagina que está en una encrucijada y debe tomar una decisión basada en una condición. Si se cumple una condición, tomas el camino de la izquierda; de lo contrario, tomas el camino de la derecha. Esa es precisamente la esencia del condicional _if-else_.
-
-```
-// Sintaxis
-```
-
-```javascript
- if (condición) {
-    // Código a ejecutar si la condición es verdadera
-    } else {
-    // Código a ejecutar si la condición original es falsa
-    }
-```
-
-#### Ejemplos:
-
-#### Determinar el tipo de suscripción en una plataforma.
-
-<pre class="language-javascript"><code class="lang-javascript">let horasVistas = 50;
-<strong>if (horasVistas > 40) {
-</strong>     console.log("Recomendamos la suscripción Premium.");
-}
-else {
-     console.log("Una suscripción Estándar es suficiente para ti.");
-}
-
-// Recomendamos la suscripción Premium.
-</code></pre>
-
-#### Verificar si un usuario puede acceder a un contenido exclusivo.
-
-```javascript
-let esMiembro = true;
-let tieneCupon = false;
-
-if (esMiembro || tieneCupon) {
-   console.log("¡Puedes acceder al contenido exclusivo!");
-} else {
-   console.log("Lo sentimos, necesitas ser miembro o tener un cupón.");
-}
-
-// ¡Puedes acceder al contenido exclusivo!
-```
-
-#### Determinar el descuento aplicado en una tienda en línea
-
-```javascript
-let esEstudiante = true;
-let esPrimerCompra = false;
-
-if (esEstudiante || esPrimerCompra) {
-    console.log("Tienes un 10% de descuento.");
-} else {
-    console.log("No tienes descuentos disponibles.");
-}
-    
-// Tienes un 10% de descuento.
-```
-
-## ¿Qué es un operador ternario?
-
-> The ternary operator is a conditional operator that takes three operands. It’s commonly used in programming languages to provide a concise way of expressing simple conditional logic. 
->
->El operador ternario es un operador condicional que toma tres operandos. Se usa comúnmente en lenguajes de programación para proporcionar una forma concisa de expresar lógica condicional simple.
-
-El operador condicional (ternario) es el único **operador en JavaScript** que tiene tres operandos. Este operador se usa con frecuencia como atajo para la instrucción if. Siendo un condicional simple que ejecuta una de dos instrucciones posibles dependiendo de la evaluación previa de una condición.
-
-### **Sintaxis**
-
-```javascript
-condición ? expresión1 : expresión2;
-```
-* It can be visualized as an if-else statement:
-* Se puede visualizar como una if-else declaración:
-```
-if (Expression1) {
-    variable = Expression2;
-} else {
-    variable = Expression3;
-}
-```
-### **Parámetros**
-
-* **Condición**.- Expresión que se puede evaluar como verdadera o falsa.
-* **Expresión 1 y 2**.- Expresiones con valores definidos que pueden ejecutarse dependiendo de la condición.
-
-### **Forma de uso**
-
-```javascript
-variable = expresion ? true_value : false_value;
-```
-
-Esto permite básicamente una asignación condicional a una variable en función de la evaluación de la expresión. Si es cierto, entonces true\_value se asigna a la variable, caso contrario, entonces false\_value se asigna a la variable.
-
-### **Ejemplos**
-
-```javascript
-var num1 = 5;
-var num2 = 7;
-var max = ( num1 > num2 ) ? num1 : num2 ;
-
-console.log(max);
-
-// 7
-```
-
-En este ejemplo , `max` es usado para ser asignado al número con el valor más alto . La expresión indica que si `num1` es mayor que `num2`, entonces `num1` se asigna a `max` .  Sin embargo, si la expresión es falsa ( lo que significa que `num2` es mayor o igual a `num1` ), a continuación, `num2` se asigna a `máx` .
-
-```javascript
-var miEdad = 24;
-var mayorEdad = (miEdad > 18) ? "Sí, eres mayor de edad" : "No, sigue intentando";
-
-console.log(mayorEdad);
-
-// Sí, eres mayor de edad
-```
-
-
-
-En este segundo ejemplo vemos cómo reconocer un dato si es mayor a 18, y asignar a la variable un string, con dos posibilidades.
-
-```javascript
-var diaFeriado = false;
-var pagar = "Hoy debo pagar " + ( diaFeriado ? "19 euros" : "15 euros");
-
-console.log(pagar);
-
-// Hoy debo pagar 15 euros
-```
-
-En este otro caso evaluamos una expresión booleana, y se obtiene un string el cual posteriormente es concatenado a otro.
-
-Podemos usar también el operador ternario con una estructura más larga.
-
-```javascript
-var a = 15;
-var numeroObtenido = a == 5 ? "Cinco":
-                    a == 7 ? "Siete":
-                    a == 11 ? "Once":
-                    a == 15 ? "Quince":
-                    "Otro Número";
-
-console.log( numeroObtenido );
-
-// Quince
-```
-
-En este caso, ampliamos el uso del condicional ternario. Cuando la primera condición evaluada no es verdadera, optamos por establecer una nueva condición y seguir el ciclo anterior.
-
-## ¿Cuál es la diferencia entre una declaración de función y una expresión de función?
-### What is the difference between a declaration of function and an expression of function?
-
-> Certainly! In JavaScript, there are two ways to define functions: function declarations and function expressions. 
->
-> ¡Ciertamente! En JavaScript, hay dos formas de definir funciones: declaraciones de funciones y expresiones de funciones.
-
-Veremos las diferencias de sintaxis y prácticas de ambas a través de un pequeño ejemplo.
-
-Let’s explore the differences between them:
-
-Un ejemplo de **declaración de función** es el siguiente:
-
-```javascript
-function sum(a,b) {
-   return a + b;
-}
-```
-
-Se caracteriza por el hecho de que la **declaración de una función la hace disponible para todo el programa**, incluyendo el código que está antes de la declaración de la función.&#x20;
-
-```javascript
-var add = sum(3,2);
+* El while bucle ejecuta un bloque de código mientras se cumple una condición especificada.
+> The while loop executes a block of code while a specified condition is true.
  
-function sum(a,b) {
-   return a + b;
+
+
+#### Example: Ejemplo:
+```javascript
+let count = 0;
+while (count < 5) {
+    console.log("Count: " + count);
+    count++;
 }
 
-console.log(add);
-
-// 5
 ```
 
-Una **expresión con una función** es:
+### Do…while Loop: Do... while Bucle
 
-```javascript
-var sum = function(a,b) {
-   return a + b;
-};
-```
-
-En este caso, estamos declarando un función y asignándosela a una variable. Es similar a declarar una expresión lambda en Pyhton. No es posible referenciarla antes de la expresión, porque realmente no se trata de una función declarada, sino del valor asignado a una variable y, por tanto, **hasta que no se defina la variable no se puede utilizar**.
-
-```javascript
-var sum = function(a,b) {
-    return a + b;
- };
-
- console.log(sum(4,2));
+* Similar al while bucle, pero siempre ejecuta el bloque de código al menos una vez, incluso si la condición es falsa inicialmente.
+> Similar to the while loop, but it always executes the code block at least once, even if the condition is false initially.
  
- // 6
-```
 
-Una diferencia más. En el segundo caso (usar una función en una expresión) es necesario terminar la expresión con un punto y coma (`;`), igual que cualquier otra expresión.
-
-## ¿Qué es la palabra clave "this" en JS?
-### What is the keyword "This" in JS?
-
-
-### ¿Qué es el `this`? <a href="#que-es-el-this" id="que-es-el-this"></a>
-
-> It is a word reserved in JavaScript that we can use to refer to the context in which it is invoked, so its implicit value can vary during the execution of the code.
-
-Es una palabra reservada en JavaScript que podemos utilizar para referirnos al contexto en el que se invoca, por lo que su valor implícito puede variar durante la ejecución del código.
-
-### `this` en el contexto global <a href="#this-en-el-contexto-global" id="this-en-el-contexto-global"></a>
-
-Decimos que el contexto global es todo lo que se encuentra fuera de cualquier bloque de código.
-
-En este caso, `this` siempre hace referencia al objeto global:
-
+#### Example: Ejemplo:
 ```javascript
-console.log(this === window);
+let num = 0;
+do {
+    console.log("Number: " + num);
+    num++;
+} while (num < 5);
 
-// true
 ```
+### For/In Loop: For/En bucle
 
+* Se utiliza para iterar sobre las propiedades de un objeto.
+> Used to iterate over the properties of an object.
+ 
+
+#### Example: Ejemplo:
 ```javascript
-this.awesomeNumber = 37
-console.log(awesomeNumber)
-
-// 37
-```
-
-### `this` en el contexto de una función <a href="#this-en-el-contexto-de-una-funcion" id="this-en-el-contexto-de-una-funcion"></a>
-
-Si invocamos `this` dentro de una función, su valor cambia dependiendo de cómo ejecutamos la función.
-
-#### Llamada simple <a href="#llamada-simple" id="llamada-simple"></a>
-
-Si es una llamada simple y no está en modo estricto, `this` devuelve el objeto global.
-
-```javascript
-function whoIsThis() {
-  return this
+const person = { name: "Alice", age: 30 };
+for (const key in person) {
+    console.log(key + ": " + person[key]);
 }
 
-console.log(whoIsThis() === window)
 
-// true
 ```
+### For/Of Loop: Bucle For/Of
 
-#### Llamada simple (modo estricto) <a href="#llamada-simple-modo-estricto" id="llamada-simple-modo-estricto"></a>
+* Itera sobre los valores de un objeto iterable (por ejemplo, matrices, cadenas, mapas, conjuntos).
+>Iterates over the values of an iterable object (e.g., arrays, strings, maps, sets).
+ 
 
-Si es una llamada simple y está en modo estricto, `this` conserva el valor que haya recibido antes de la ejecución de la función, y devuelve `undefined` si no ha recibido ninguno.
-
+#### Example: Ejemplo:
 ```javascript
-function whoIsThis() {
-  'use strict'
-  return this
+const colors = ["red", "green", "blue"];
+for (const color of colors) {
+    console.log("Color: " + color);
 }
-
-console.log(whoIsThis())
-
-// undefined
 ```
 
-#### Como método de objeto <a href="#como-metodo-de-objeto" id="como-metodo-de-objeto"></a>
+### forEach loop: Bucle forEach
 
-Si la función es el método de un objeto y se invoca como tal, `this` es el objeto en sí mismo.
+* Este método entra dentro del grupo de Iterables sin devolver una nueva matriz, lo que hace el forEach es ejecutar una función por cada elemento del array. En cada iteración se tendrá acceso a 3 variables: valor (del elemento), índice (del elemento) y array (que estamos recorriendo) y con ello la función que se ejecutará para cada elemento de una matriz.
+  * Este método es muy útil cuando solo necesitamos ejecutar una función a través de cada elemento del array, sin necesidad de obtener un retorno. El forEach() también se puede utilizar en mapas y conjuntos.
+>This method enters the group of Iterables without returning a new array, what forEach does is execute a function for each element of the array. In each iteration we will have access to 3 variables: value (of the element), index (of the element) and array (which we are going through) and with it the function that will be executed for each element of an array.
+>> This method is very useful when we only need to execute a function through each element of the array, without needing to obtain a return. The forEach() can also be used on maps and sets.
+ 
 
+#### Example: Ejemplo:
 ```javascript
-const me = {
-  name: 'Carlos Reyes',
-  sayMyName() {
-    return this.name
-  },
+let students = ['John', 'Sara', 'Jack'];
+
+// using forEach
+students.forEach(myFunction);
+
+function myFunction(item) {
+
+    console.log(item);
 }
 
-console.log(me.sayMyName())
-
-// 'Carlos Reyes'
+// salida
+/* John
+   Sara
+   Jack */
 ```
+> Recuerda, cada tipo de bucle sirve para diferentes propósitos, ¡así que elige el que mejor se adapte a tu tarea específica! Si tiene más preguntas, 
 
-#### Función asignada como método de un objeto <a href="#funcion-asignada-como-metodo-de-un-objeto" id="funcion-asignada-como-metodo-de-un-objeto"></a>
+> Remember, each type of loop serves different purposes, so choose the one that best fits your specific task! If you have any more questions, 
 
-Cuando se define una función y luego se asigna como método de un objeto, `this` dentro de la función se refiere al objeto al que se ha asignado la función.
+#### -------------------------------------------------------------------------------------------------------------------------------------------------
 
-```javascript
-function sayHello() {
-  console.log(`Hola, soy ${this.name}.`)
-}
-
-const person = {
-  name: 'Juan',
-  greet: sayHello, // asignamos 'sayHello' a la propiedad 'greet'
-}
-
-person.greet()
-
-// Hola, soy Juan.
-```
-
-#### Función asignada como método de un objeto anidado <a href="#funcion-asignada-como-metodo-de-un-objeto-anidado" id="funcion-asignada-como-metodo-de-un-objeto-anidado"></a>
-
-Cuando se define una función y se asigna como propiedad de un objeto más anidado, `this` dentro de la función se refiere al objeto más inmediato que contiene la función como propiedad.
-
-```javascript
-const myObj = {
-  myMethod: function () {
-    console.log(this)
-  },
-  nestedObj: {
-    nestedMethod: myObj.myMethod,
-  },
-}
-
-myObj.myMethod() // Imprime el objeto myObj
-myObj.nestedObj.nestedMethod()
-
-// Imprime el objeto nestedObj
-```
-
-> Remember that this is not a variable; it is a keyword, and you cannot change its value directly1. Understanding how this behaves in different contexts is crucial for writing effective JavaScript code! 
+## 2- ¿Cuáles son las diferencias entre const, let y var?
+> What are the differences between const, let and var?
 > 
-> Recuerde que this no es una variable; Es una palabra clave y no puede cambiar su valor directamente 1 . ¡Comprender cómo this se comporta en diferentes contextos es crucial para escribir código JavaScript efectivo!
+- Certainly! Let’s explore the differences between var, let, and const in JavaScript:
+- ¡Ciertamente! Exploremos las diferencias entre var , let y const en JavaScript:
+
+
+## var 
+* **Scope:** Variables declared with var are globally scoped or function-scoped.
+* **Ámbito:** las variables declaradas con var tienen un ámbito global o un ámbito de función.
+
+  - If declared outside a function, they are available for use throughout the entire window.
+  - Si se declaran fuera de una función, están disponibles para su uso en toda la ventana.
+- 
+  - If declared within a function, they are accessible only within that function.
+  - Si se declaran dentro de una función, solo se puede acceder a ellos dentro de esa función.
+
+* **Hoisting**: var variables are hoisted to the top of their scope and initialized with a value of undefined.
+* **Elevación:** var las variables se elevan a la parte superior de su ámbito y se inicializan con un valor de undefined
+####
+* **Re-declaration and Updates:** You can re-declare and update var variables within their scope.
+* **Redeclaración y actualizaciones:** puede volver a declarar y actualizar var variables dentro de su ámbito.
+
+#### Example: Ejemplo:
+```javascript
+var greeter = "hey hi";
+var greeter = "say Hello instead"; // No error
+
+```
+## let 
+* **Scope:** Variables declared with let are block-scoped (limited to the nearest enclosing curly braces { ... }).
+* **Ámbito:** las variables declaradas con let ámbito de bloque (limitadas a las llaves { ... } envolventes más cercanas).
+####
+* **Hoisting**: Like var, let variables are also hoisted, but they are not initialized until the actual declaration is encountered.
+* **Elevación:** Al igual var que , let las variables también se elevan, pero no se inicializan hasta que se encuentra la declaración real.
+####
+* **Re-declaration and Updates:** You can update let variables within their scope, but you cannot re-declare them
+* **Redeclaración y actualizaciones:** puede actualizar let las variables dentro de su ámbito, pero no puede volver a declararlas.
+
+#### Example: Ejemplo:
+```javascript
+let greeting = "hello";
+greeting = "hi"; // Valid
+let greeting = "hey"; // Error: Identifier 'greeting' has already been declared
+
+```
+
+## const 
+* **Scope:** Variables declared with const are also block-scoped.
+* **Ámbito:** las variables declaradas con const también tienen ámbito de bloque.
+####
+* **Hoisting**: Like let, const variables are hoisted but not initialized until the actual declaration.
+* **Elevación:** Al igual let que , const las variables se elevan pero no se inicializan hasta la declaración real.
+####
+* **Re-declaration and Updates:** You cannot re-declare or update const variables after their initial assignment
+* **Redeclaración y actualizaciones:** no se pueden volver a declarar ni actualizar const variables después de su asignación inicial.
+
+#### Example: Ejemplo:
+```javascript
+const pi = 3.14;
+pi = 3.14159; // Error: Assignment to constant variable
+
+```
+In summary: En resumen:
+
+- Use var when you want global or function-scoped variables.
+  > Utilícelo var cuando desee variables globales o de ámbito de función.
+- Use let when a variable’s value may change over time.
+  >Se usa let cuando el valor de una variable puede cambiar con el tiempo.
+- Use const for variables that should remain constant after their initial assignment.
+  >Se usa const para variables que deben permanecer constantes después de su asignación inicial.
+
+>Remember, avoiding var is recommended due to its potential issues, and using let and const provides better scoping and clarity in your code.
+> 
+> Recuerde que se recomienda evitarlo var debido a sus posibles problemas, y el uso let y const proporciona un mejor alcance y claridad en su código
+
+![varLetConst.png](..%2FImages%2FvarLetConst.png)
+
+
+
+## 3- ¿Qué es una función de flecha?
+> What is an arrow function?
+> 
+
+###### Una función de flecha en JavaScript es una forma concisa de escribir funciones. Se introdujo en ECMAScript 6 (ES6) y proporciona una sintaxis más compacta para definir funciones. Estos son algunos puntos clave sobre las funciones de flecha:
+
+###### An arrow function in JavaScript is a concise way of writing functions. It was introduced in ECMAScript 6 (ES6) and provides a more compact syntax for defining functions. Here are some key points about arrow functions:
+
+## Syntax: Sintaxis:
+* Arrow functions use the => syntax.
+> Las funciones de flecha utilizan la => sintaxis.
+####
+* They are often assigned to variables, making them anonymous functions.
+> A menudo se asignan a variables, lo que las convierte en funciones anónimas.
+####
+
+#### Example: Ejemplo:
+```javascript
+// Regular function
+let add = function(a, b) {
+    return a + b;
+};
+
+// Arrow function
+let addArrow = (a, b) => a + b;
+
+```
+
+
+## Shorter Syntax: Sintaxis más corta:
+* If an arrow function has only one statement, you can omit the curly braces {} and the return keyword.
+> Si una función de flecha solo tiene una instrucción, puede omitir las llaves {} y la return palabra clave.
+
+
+#### Example: Ejemplo:
+```javascript
+// Regular function
+let greet = function() {
+    return "Hello World!";
+};
+
+// Arrow function (shorter)
+let greetArrow = () => "Hello World!";
+
+```
+## Parameters: Parámetros:
+* If the function takes parameters, they are enclosed in parentheses.
+> Si la función toma parámetros, se encierran entre paréntesis.
+
+
+#### Example: Ejemplo:
+```javascript
+// Arrow function with parameters
+let greetWithName = (name) => "Hello " + name;
+
+```
+
+
+## this Keyword Behavior:
+## this Comportamiento de las palabras clave:
+* Arrow functions behave differently from regular functions regarding the this keyword.
+> Las funciones de flecha se comportan de manera diferente a las funciones normales con respecto a la this palabra clave.
+####
+* In regular functions, this represents the object that calls the function.
+> En funciones regulares, this representa el objeto que llama a la función.
+####
+* In arrow functions, this always represents the object that defined the arrow function.
+> En las funciones de flecha, this siempre representa el objeto que definió la función de flecha.
+####
+
+#### Example: Ejemplo:
+```javascript
+// Regular function
+let regularFunc = function() {
+    console.log(this); // Represents the caller (window or button)
+};
+
+// Arrow function
+let arrowFunc = () => {
+    console.log(this); // Represents the owner of the function (window)
+};
+
+```
+
+
+## Browser Support: Compatibilidad con navegadores
+* Arrow functions are supported in modern browsers (e.g., Chrome, Firefox, Safari).
+> Las funciones de flecha son compatibles con los navegadores modernos (por ejemplo, Chrome, Firefox, Safari).
+
+
+
+
+
+
+
+
+
+
+
+
