@@ -733,9 +733,214 @@ fetchData()
 ## 8- ¿Qué hacen async y await por nosotros?
 > What do Async and Await for us?
 
+* Async/await es una característica eficaz de JavaScript que le permite trabajar con promesas de una manera más cómoda y sincrónica. Vamos a desglosarlo:
+  * Async/await is a powerful feature in JavaScript that allows you to work with promises in a more comfortable and synchronous-like fashion. Let’s break it down:
+
+### Funciones asíncronas:   -  Async Functions: 
+###### * Una función asincrónica se define mediante la palabra clave antes de una declaración o expresión de async función.
+      - An async function is defined using the async keyword before a function declaration or expression.
+
+###### * Cuando marca una función como async , siempre devuelve una promesa. Si la función devuelve explícitamente un valor que no es de promesa, se encapsula automáticamente en una promesa resuelta.
+      - When you mark a function as async, it always returns a promise. If the function explicitly returns a non-promise value, it is automatically wrapped in a resolved promise.
+####  Example: Ejemplo 
+```javascript
+async function f() {
+    return 1;
+}
+Here, f() returns a resolved promise with the value 1.
+Aquí, f() devuelve una promesa resuelta con el valor 1 .
+
+```
+
+### Esperar:  -  Await: 
+
+###### * La await palabra clave solo se puede usar dentro de funciones asincrónicas.
+      - The await keyword can only be used inside async functions.
+
+###### * Hace que JavaScript espere hasta que una promesa se liquide (ya sea se resuelva o se rechace) y luego devuelve su resultado.
+      - It makes JavaScript wait until a promise settles (either resolves or rejects) and then returns its result.
+
+####  The syntax is: La sintaxis es:
+```javascript
+let value = await promise;
+
+
+```
+####  Here’s an example: He aquí un ejemplo:
+
+```javascript
+async function f() {
+    let promise = new Promise((resolve, reject) => {
+        setTimeout(() => resolve("done!"), 1000);
+    });
+    let result = await promise;
+    alert(result); // "done!"
+}
+f();
+
+//En este ejemplo, la ejecución de la función se detiene en la await línea y se reanuda cuando se liquida la promesa (después de 1 segundo en este caso).
+//In this example, the function execution pauses at the await line and resumes when the promise settles (after 1 second in this case).
+```
+
+### Beneficios de Await -  Benefits of Await: 
+
+###### * El uso await es más elegante que el encadenamiento de .then() llamadas para controlar los resultados prometidos.
+      - Using await is more elegant than chaining .then() calls for handling promise results.
+
+###### * Hace que el código asincrónico sea más fácil de leer y escribir.
+      - It makes asynchronous code easier to read and write.
+
+###### * Es importante destacar que, mientras la función espera a que se liquide la promesa, el motor de JavaScript puede realizar otras tareas (como ejecutar otros scripts o controlar eventos) sin consumir recursos adicionales de la CPU.
+      - Importantly, while the function is waiting for the promise to settle, the JavaScript engine can perform other tasks (such as executing other scripts or handling events) without consuming additional CPU resources.
+
+
+### Limitaciones: - Limitations: 
+
+
+###### * No se puede usar await fuera de una función asincrónica. Si intenta hacerlo, se producirá un error de sintaxis.
+      - You cannot use await outside of an async function. Attempting to do so will result in a syntax error.
+
+###### * Por ejemplo, el código siguiente produciría un error:
+      - For example, the following code would throw an error:
+
+```javascript
+function f() {
+    let promise = Promise.resolve(1);
+    let result = await promise; // Syntax error
+}
+
+```
+####  Example with Fetch API and Async/Await:  -  Ejemplo con Fetch API y Async/Await:
+
+```javascript
+//Supongamos que desea obtener datos de usuario de un archivo JSON y, a continuación, recuperar el avatar de GitHub del usuario:
+// Suppose you want to fetch user data from a JSON file and then retrieve the user’s GitHub avatar:
+
+async function showAvatar() {
+    // Read user data from JSON
+    let response = await fetch('/article/promise-chaining/user.json');
+    let user = await response.json();
+
+    // Fetch GitHub user data
+    let githubResponse = await fetch(`https://api.github.com/users/${user.name}`);
+    let githubUser = await githubResponse.json();
+
+    // Display the avatar
+    let img = document.createElement('img');
+    img.src = githubUser.avatar_url;
+    img.className = "promise-avatar-example";
+    document.body.append(img);
+
+    // Wait for 3 seconds
+    await new Promise((resolve, reject) => setTimeout(resolve, 3000));
+}
+
+// Call the function
+showAvatar();
+
+//En este ejemplo, usamos await para manejar las promesas devueltas por fetch() y response.json() , haciendo que el código sea más legible y conciso 
+//In this example, we use await to handle promises returned by fetch() and response.json(), making the code more readable and concise1.
+
+```
+
+> Recuerde que async/await simplifica el trabajo con código asincrónico, lo que facilita la administración de promesas y el control de sus resultados.
+>
+>> Remember that async/await simplifies working with asynchronous code, making it easier to manage promises and handle their results. 
 
 
 
+## Promise basics explained using my birthday
+
+![varLetConst.png](..%2FImages%2FasyncWait.png)
+
+My friend Kayo promises to make a cake for my birthday in two weeks.
+- Mi amiga Kayo promete hacer un pastel para mi cumpleaños en dos semanas.
+
+If everything goes well and Kayo doesn't get sick, we'll have a certain number of cakes. (Cakes are a countable in this tutorial ). Otherwise, if Kayo gets sick, we'll have no cakes.
+ - Si todo va bien y Kayo no se enferma, tendremos un cierto número de pasteles. (Los pasteles son un contable en este tutorial ). De lo contrario, si Kayo se enferma, no tendremos pasteles.
+
+Either way, we're still going to have a party.
+ - De cualquier manera, todavía vamos a tener una fiesta.
+
+For this first task, we'll translate this story into code. First, let's create a function that returns a Promise:
+ - Para esta primera tarea, traduciremos esta historia a código. Primero, vamos a crear una función que devuelva un Promise :
+
+```javascript
+const onMyBirthday = (isKayoSick) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (!isKayoSick) {
+        resolve(2);
+      } else {
+        reject(new Error("I am sad"));
+      }
+    }, 2000);
+  });
+};
+
+```
+
+In JavaScript, we can create a new Promise with new Promise(), which takes in a function as an argument: (resolve, reject) => {}.
+ - En JavaScript, podemos crear un nuevo Promise con new Promise() , que toma una función como argumento: (resolve, reject) => {} .
+
+In this function, resolve and reject are callback functions that are provided by default in JavaScript.
+ - En esta función, resolve y reject son funciones de devolución de llamada que se proporcionan de forma predeterminada en JavaScript.
+
+Let's take a closer look at the code above.
+ - Echemos un vistazo más de cerca al código anterior.
+
+When we run the onMyBirthday function, after 2000ms:
+ - Cuando ejecutamos la función, después de onMyBirthday 2000ms :
+
+If Kayo is not sick, then we run resolve with 2 as the argument
+ - Si Kayo no está enfermo, entonces corremos resolve con 2 el argumento
+
+If Kayo is sick then we run reject with new Error("I am sad") as the argument. Even though you can pass anything to reject as an argument, it's recommended to pass it an Error object.
+ - Si Kayo está enfermo, entonces corremos reject con new Error("I am sad") el argumento. Aunque puedes pasar cualquier cosa como reject argumento, se recomienda pasarle un Error objeto.
+
+Now, because onMyBirthday() returns a Promise, we have access to the then, catch, and finally methods.
+ - Ahora, debido a que onMyBirthday() devuelve un Promise , tenemos acceso a los then métodos , catch , y finally .
+
+And we also have access to the arguments that were passed into resolve and reject earlier within then and catch.
+ - Y también tenemos acceso a los argumentos que se pasaron a resolve y reject antes dentro de then y catch .
+
+Let's take a closer look at the code.
+ - Echemos un vistazo más de cerca al código.
+
+If Kayo is not sick:
+ - Si Kayo no está enfermo:
+
+```javascript
+onMyBirthday(false)
+  .then((result) => {
+    console.log(`I have ${result} cakes`); // In the console: I have 2 cakes  
+  })
+  .catch((error) => {
+    console.log(error); // Does not run
+  })
+  .finally(() => {
+    console.log("Party"); // Shows in the console no matter what: Party
+  });
+
+```
+If Kayo is sick:
+ - Si Kayo está enfermo:
+```javascript
+onMyBirthday(true)
+  .then((result) => {
+    console.log(`I have ${result} cakes`); // does not run 
+  })
+  .catch((error) => {
+    console.log(error); // in console: Error: I am sad
+  })
+  .finally(() => {
+    console.log("Party"); // Shows in the console no matter what: Party
+  });
+
+```
+
+Alright, so by now, I hope you get the basic idea of Promise. Let's move onto task 2.
+ - Muy bien, a estas alturas, espero que tengas la idea básica de Promise . Pasemos a la tarea 2.
 
 
 

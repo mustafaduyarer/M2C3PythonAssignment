@@ -1,44 +1,42 @@
 /*
-Create a JS function that accepts 4 arguments. Add the first two arguments, then the two seconds and multiply them.
-If the created number is greater than 50, the console records "the number is greater than 50!" If it is smaller,
-the console records "the number is less than 50!"
+-Cree un bucle for en JS que imprima cada nombre en esta lista. miLista = “velma”, “exploradora”, “jane”, “john”, “harry”
 ---------------------------------------------------------------------------------------------------------------------
-Cree una función JS que acepte 4 argumentos. Suma los dos primeros argumentos, luego los dos segundos y multiplícalos.
-Si el número creado es mayor que 50, la consola registra "¡el número es mayor que 50!"
-Si es más pequeño, la consola registra "¡el número es inferior a 50!"
+Create a loop for in JS that prints each name on this list. Milista = "Velma", "Explorer", "Jane", "John", "Harry"
 */
 
-function checkNumber(a, b, c, d) {
-    const sum = a + b;
-    const product = c * d;
+const milista = ["Velma", "Explorer", "Jane", "John", "Harry"];
 
-    if (sum + product > 50) {
-        console.log("The number is greater than 50!");
-    } else {
-        console.log("The number is less than 50!");
-    }
+for (const name of milista) {
+    console.log(name);
 }
 
-// Example usage:
-checkNumber(10, 20, 30, 40); // Output: "The number is greater than 50!"
-checkNumber(5, 10, 2, 3); // Output: "The number is less than 50!"
-checkNumber(1, 13, 3, 2); // Output: "The number is less than 50!"
-checkNumber(15, 135, 35, 62); // Output: "The number is greater than 50!"
+console.log('---------------------------------------------------------------------')
 
+/*
+-Cree un bucle while que recorra la misma lista y también imprima los nombres. Nota: Recuerda crear un contador para que el ciclo no sea infinito.
+---------------------------------------------------------------------------------------------------------------------
+-Create a While loop that travels the same list and also prints the names. Note: Remember to create a counter so that the cycle is not infinite.*/
 
-function checkNumber(a, b, c, d) {
-    const sum = a + b;
-    const product = c * d;
+const milista = ["Velma", "Explorer", "Jane", "John", "Harry"];
+let counter = 0;
 
-    if (sum + product > 50) {
-        console.log("The number is greater than 50!");
-    } else {
-        console.log("The number is less than 50!");
-    }
+while (counter < milista.length) {
+    console.log(milista[counter]);
+    counter++;
 }
 
-// Example usage:
-checkNumber(10, 20, 30, 40); // Output: "The number is greater than 50!"
-checkNumber(5, 10, 2, 3); // Output: "The number is less than 50!"
-checkNumber(1, 13, 3, 2); // Output: "The number is less than 50!"
-checkNumber(15, 135, 35, 62); // Output: "The number is greater than 50!"
+console.log('---------------------------------------------------------------------')
+
+/*
+-Cree una función de flecha que devuelva "Hola mundo".
+---------------------------------------------------------------------------------------------------------------------
+-Create an arrow function that returns "Hi Mundo".
+*/
+
+const greetMundo = () => "Hola Mundo";
+
+console.log(greetMundo()); // Output: Hola Mundo
+
+
+console.log('---------------------------------------------------------------------')
+
