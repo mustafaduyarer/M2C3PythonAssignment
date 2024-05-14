@@ -27,3 +27,16 @@ def fizz_buzz(num1, num2):
 
 # call funtion
 fizz_buzz(1, 101)
+
+
+def fizz_buzz(num1, num2):
+    for num in range(num1, num2):
+        output = ""
+        if num % 3 == 0:
+            output = output + "Fizz"
+        if num % 5 == 0:
+            output += "Buzz"
+        print(output or num)
+
+# call funtion
+fizz_buzz(1, 101)
